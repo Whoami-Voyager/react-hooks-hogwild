@@ -18,16 +18,14 @@ function DisplayHog({ hogs }) {
         else {
             return 0
         }
-
     })
 
-    const fullyFilteredHogs = allHogs.filter((hog)=>{
-        if(!filteredHogs){
+    const fullyFilteredHogs = allHogs.filter((hog) => {
+        if (!filteredHogs) {
             return true
         }
         return hog.greased === filteredHogs
     })
-
     const hogDescription = fullyFilteredHogs.map((hogs, index) => {
         return (
             <HogImages hog={hogs} key={index} />
